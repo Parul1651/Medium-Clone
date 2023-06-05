@@ -12,7 +12,7 @@ app.use(express.static('dist'));
 app.use("/api/posts",require("./controllers/postsApi"))
 app.use("/api/loginSignup",require("./controllers/loginSignUp"))
 
-const DATABASE_CONNECTION_STRING = 'mongodb://localhost:27017/Users'
+const DATABASE_CONNECTION_STRING = 'mongodb+srv://parul:123@cluster0.up1mfjz.mongodb.net/mediumClone'
 
 mongoose.connect(DATABASE_CONNECTION_STRING).then(() => console.log("Connected to DataBase!")).catch((e) => console.error("Couldn't Connect to database due to:",e.message))
 // const Post = mongoose.model('Post', postsSchema);
